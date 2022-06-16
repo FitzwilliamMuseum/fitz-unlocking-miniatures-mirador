@@ -11,7 +11,7 @@ const mapStateToProps = (state, { id, windowId }) => {
         state,
         canvasId,
         canvasIds,
-        layerMetadata: state.customLayers || state.customLayers[windowId] || state.customLayers[windowId][canvasId],
+        layerMetadata: state?.customLayers?.[windowId]?.[canvasId],
         layers: getSortedLayers(state, { canvasId, windowId }),
     }
 };

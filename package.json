@@ -21,7 +21,6 @@
     "deepmerge": "^4.2.2",
     "lodash": "^4.17.11",
     "mirador": "^3.3.0",
-    "openseadragon": "^3.1.0",
     "react": "^16.13.1",
     "react-beautiful-dnd": "^13.1.0",
     "react-dom": "^16.13.1"

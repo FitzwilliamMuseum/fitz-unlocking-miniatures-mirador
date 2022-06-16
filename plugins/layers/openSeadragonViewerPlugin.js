@@ -36,16 +36,17 @@ const Layers = class extends Component {
       let layer = { opacity: 1 };
       //The layer keys in OpenSeadragon are shorter, not sure why.
       //Should be a better way to index layers.
+      //Update: These ids come directly from the manifest - choice item id and service id
       const layerMetadataKeys = Object.keys(layerMetadata);
       for (let i = 0; i < layerMetadataKeys.length; i++) {
-        if (layerMetadataKeys[i].indexOf(item.source['@id']) == 0) {
+        if (layerMetadataKeys[i].includes(item.source['@id'])) {
           layer = layerMetadata[layerMetadataKeys[i]];
           break;
         }
       }
       const imageSize = item.getContentSize();
-      const rect = new OpenSeadragon.Rect(0, 0, imageSize.x * layer.opacity, imageSize.y);
-      item.setClip(rect);
+      const clip = new OpenSeadragon.Rect(0, 0, imageSize.x * layer.opacity, imageSize.y);
+      item.setClip(clip);
     });
   }
 

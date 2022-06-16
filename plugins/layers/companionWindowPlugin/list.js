@@ -17,33 +17,8 @@ const Layers = class extends Component {
 
     constructor(props) {
         super(props);
-        this.handleOpacityChange = this.handleOpacityChange.bind(this);
-        this.onMove = this.onMove.bind(this);
         this.onDragEnd = this.onDragEnd.bind(this);
         this.droppableId = "droppable";
-    }
-
-    componentDidMount() {
-    }
-
-    componentDidUpdate(prevProps) {
-        const { canvasIds, id, windowId } = this.props;
-        // console.log('componentDidUpdate', this.props)
-    }
-
-    handleOpacityChange(layerId, value) {
-        const { canvasId, updateCustomLayers, windowId, } = this.props;
-
-        const payload = {
-            [layerId]: { opacity: value / 100.0 },
-        };
-
-        updateCustomLayers(windowId, canvasId, payload);
-    }
-
-    onMove(dragIndex, hoverIndex) {
-        console.log("onMove dragIndex", dragIndex)
-        console.log("onMove hoverIndex", hoverIndex)
     }
 
     onDragEnd(result) {
@@ -71,8 +46,7 @@ const Layers = class extends Component {
     }
 
     render() {
-        // console.log("props", this.props);
-        const { canvasIds, id, windowId, layerMetadata, layers, updateCustomLayers } = this.props;
+        const { canvasId, id, windowId, layerMetadata, layers, updateCustomLayers } = this.props;
         const { width, height } = { height: undefined, width: 50 };
 
         return <div>
@@ -102,6 +76,8 @@ const Layers = class extends Component {
                                             index={index}
                                             layer={layer}
                                             resource={resource}
+                                            windowId={windowId}
+                                            canvasId={canvasId}
                                             updateCustomLayers={updateCustomLayers}
                                         ></LayerListItem>
                                     </ListItem>

@@ -44,7 +44,6 @@ const PhysicalRuler = class extends Component {
                 mm: 1.0,
             };
             const pixelsPerMillimeter = 1 / (millimetersPerPhysicalUnit[service.physicalUnits] * service.physicalScale);
-            // console.log("viewer", viewer);
 
             this.ruler = this.ruler || new DocumentRuler({
                  viewer, show: true, 
@@ -57,7 +56,6 @@ const PhysicalRuler = class extends Component {
             // this.ruler.refresh(viewer.tileCache._tilesLoaded[0].tiledImage);
 
             viewer.addHandler('tile-loaded', (obj) => {
-                // console.log("viewer.addHandler('tile-loaded'", obj)
                 this.ruler.updateSize();
                 this.ruler.refresh(obj.tiledImage);
             });

@@ -1,5 +1,5 @@
 import Mirador from 'mirador';
-import { layersPlugin, physicalPlugin } from '~/plugins';
+import { layersPlugin, physicalPlugin,annotations } from '~/plugins';
 
 const config = {
   id: 'demo',
@@ -51,7 +51,7 @@ const config = {
           //     }
           //   }
           // })
-          console.log("postProcess action", action);
+          // console.log("postProcess action", action);
         }
       }
     ]
@@ -66,4 +66,5 @@ const config = {
 Mirador.viewer(config, [
   ...layersPlugin,
   physicalPlugin,
+  // annotations
 ]);
