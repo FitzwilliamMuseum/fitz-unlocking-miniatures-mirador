@@ -1,0 +1,31 @@
+{
+  "@context": "http://iiif.io/api/image/3/context.json",
+  "id": "images/FM_3868_UV",
+  "type": "ImageService3",
+  "profile": "level0",
+  "protocol": "http://iiif.io/api/image",
+  "width": 1273,
+  "height": 1571,
+  "extraFormats": [
+    "jpg"
+  ],
+  "extraQualities": [
+    "default"
+  ],
+  "extraFeatures": [],
+  "tiles": [
+    {
+      "scaleFactors": [
+        1
+      ],
+      "width": 1273,
+      "height": 1571
+    }
+  ],
+  "sizes": [
+    {
+      "width": 1273,
+      "height": 1571
+    }
+  ]
+}

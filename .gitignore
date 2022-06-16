@@ -1,0 +1,7 @@
+node_modules/
+dist/
+serve/
+package-lock.json
+.cache/
+.parcel-cache/
+*.log

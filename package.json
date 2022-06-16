@@ -1,0 +1,37 @@
+{
+  "name": "olamalu-mirador-plugins",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "yarn parcel build --target plugins",
+    "dev": "yarn parcel serve --dist-dir serve --target demo --open"
+  },
+  "targets": {
+    "demo": {
+      "source": "demo/index.js"
+    },
+    "plugins": {
+      "source": "plugins/index.js"
+    }
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "deepmerge": "^4.2.2",
+    "lodash": "^4.17.11",
+    "mirador": "^3.3.0",
+    "openseadragon": "^3.1.0",
+    "react": "^16.13.1",
+    "react-beautiful-dnd": "^13.1.0",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.0",
+    "express": "^4.18.1",
+    "parcel": "^2.6.0",
+    "process": "^0.11.10",
+    "querystring-es3": "^0.2.1",
+    "url": "^0.11.0"
+  }
+}
