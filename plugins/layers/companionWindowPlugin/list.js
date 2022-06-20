@@ -22,7 +22,6 @@ const Layers = class extends Component {
     }
 
     onDragEnd(result) {
-        console.log("onDragEnd", result)
         const {
             canvasId, layers, updateLayers, windowId,
         } = this.props;
@@ -41,7 +40,6 @@ const Layers = class extends Component {
             return acc;
         }, {});
 
-        console.log("payload", payload)
         updateLayers(windowId, canvasId, payload);
     }
 

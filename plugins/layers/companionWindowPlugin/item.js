@@ -35,7 +35,6 @@ const ListItem = class extends Component {
   render() {
 
     const { layer, resource, index } = this.props;
-    console.log("props",this.props)
 
     const width = 50;
     const height = undefined;

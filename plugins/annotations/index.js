@@ -13,7 +13,6 @@ class AnnotationsOverlay extends Component {
 
     render() {
         const {annotations} = this.props;
-        annotations.forEach(console.log);
         return <div>Annotation!</div>
     }
 }
