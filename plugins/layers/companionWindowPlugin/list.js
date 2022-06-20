@@ -51,7 +51,7 @@ const Layers = class extends Component {
 
         return <div>
             <CompanionWindow
-                title="Custom SidePanel Plugin B"
+                title="Custom Layers"
                 windowId={windowId}
                 id={id}
             >
@@ -68,6 +68,7 @@ const Layers = class extends Component {
                                         opacity: 1,
                                         visibility: true,
                                         id: resource.id,
+                                        label: resource?.__jsonld?.label?.en?.[0],
                                         ...(layerMetadata || {})[resource.id],
                                     };
 

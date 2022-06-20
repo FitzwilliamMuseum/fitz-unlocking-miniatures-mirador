@@ -9,6 +9,7 @@ const getItemStyle = (isDragging, draggableStyle) => ({
   padding: 16,
   margin: `0 0 8px 0`,
   background: isDragging ? "#ecececec" : "#ffffff",
+  width: "100%",
   ...draggableStyle
 });
 
@@ -34,6 +35,7 @@ const ListItem = class extends Component {
   render() {
 
     const { layer, resource, index } = this.props;
+    console.log("props",this.props)
 
     const width = 50;
     const height = undefined;
@@ -52,7 +54,7 @@ const ListItem = class extends Component {
             <DragHandleIcon
             />
           </div>
-          <div>{layer.id}</div>
+          <div>{layer.label || layer.id}</div>
           <IIIFThumbnail
             maxHeight={height}
             maxWidth={width}

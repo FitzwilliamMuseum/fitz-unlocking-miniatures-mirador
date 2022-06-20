@@ -4,9 +4,16 @@
   "type": "Manifest",
   "label": {
     "en": [
-      "Image 1"
+      "Unknown Lady"
     ]
   },
+  "description": {
+    "en": [
+      "A series of technical images of object 3868 at the Fitzwilliam Museum.  This is a miniature by Isaac Oliver, dated c. 1595-1600."
+    ]
+  },
+  "attribution": "Example attribution",
+  "license": "https://creativecommons.org/licenses/by/3.0/",
   "items": [
     {
       "id": "https://iiif.olamalu.com/miniatures/canvas/0",
@@ -26,7 +33,7 @@
                 "type": "Choice",
                 "items": [
                   {
-                    "id": "https://mebushnell.github.io/Miniatures-IIIF/images/FM_3868_NL/full/full/0/default.jpg",
+                    "id": "images/FM_3868_NL/full/max/0/default.jpg",
                     "type": "Image",
                     "format": "image/jpeg",
                     "height": 1571,
@@ -45,7 +52,7 @@
                     ]
                   },
                   {
-                    "id": "https://mebushnell.github.io/Miniatures-IIIF/images/FM_3868_RL/full/full/0/default.jpg",
+                    "id": "images/FM_3868_RL/full/max/0/default.jpg",
                     "type": "Image",
                     "format": "image/jpeg",
                     "height": 1571,
@@ -64,7 +71,7 @@
                     ]
                   },
                   {
-                    "id": "https://mebushnell.github.io/Miniatures-IIIF/images/FM_3868_NIR/full/full/0/default.jpg",
+                    "id": "images/FM_3868_NIR/full/max/0/default.jpg",
                     "type": "Image",
                     "format": "image/jpeg",
                     "height": 1571,
@@ -83,7 +90,7 @@
                     ]
                   },
                   {
-                    "id": "https://mebushnell.github.io/Miniatures-IIIF/images/FM_3868_UV/full/full/0/default.jpg",
+                    "id": "images/FM_3868_UV/full/max/0/default.jpg",
                     "type": "Image",
                     "format": "image/jpeg",
                     "height": 1571,
@@ -102,7 +109,7 @@
                     ]
                   },
                   {
-                    "id": "https://mebushnell.github.io/Miniatures-IIIF/images/FM_3868_x-ray/full/full/0/default.jpg",
+                    "id": "images/FM_3868_x-ray/full/max/0/default.jpg",
                     "type": "Image",
                     "format": "image/jpeg",
                     "height": 1571,

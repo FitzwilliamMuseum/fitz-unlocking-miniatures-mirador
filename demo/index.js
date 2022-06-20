@@ -1,5 +1,5 @@
 import Mirador from 'mirador';
-import { layersPlugin, physicalPlugin,annotations } from '~/plugins';
+import { layersPlugin, physicalPlugin, annotations } from '~/plugins';
 
 const config = {
   id: 'demo',
@@ -19,6 +19,14 @@ const config = {
     sideBarOpen: true,
     allowClose: false,
     defaultSideBarPanel: 'annotations',
+  },
+  panels: {
+    info: true,
+    attribution: true,
+    canvas: true,
+    annotations: true,
+    search: true,
+    // layers: false,
   },
   workspace: {
     showZoomControls: true,
