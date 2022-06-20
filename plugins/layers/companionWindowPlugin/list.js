@@ -13,6 +13,10 @@ const reorder = (list, startIndex, endIndex) => {
     return result;
 };
 
+const listStyle = {
+    height: "700px"
+}
+
 const Layers = class extends Component {
 
     constructor(props) {
@@ -59,6 +63,7 @@ const Layers = class extends Component {
                             <List
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
+                                style={listStyle}
                             >
 
                                 {layers.map((resource, index) => {
