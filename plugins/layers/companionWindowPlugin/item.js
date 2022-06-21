@@ -6,12 +6,33 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 const getItemStyle = (isDragging, draggableStyle) => ({
   userSelect: "none",
-  padding: 16,
-  margin: `0 0 8px 0`,
   background: isDragging ? "#ecececec" : "#ffffff",
   width: "100%",
+  borderBottom: "0.5px solid rgba(0, 0, 0, 0.12)",
+  paddingRight: "24px",
+  display: "flex",
   ...draggableStyle
 });
+
+const imageStyle = {
+  paddingRight: "4px"
+}
+
+const dragHandleWrapperStyle = {
+  display: "flex",
+  backgroundColor: "#f5f5f5",
+  alignItems: "center",
+  borderRight: "0.5px solid rgba(0, 0, 0, 0.12)"
+}
+
+const contentWrapperStyle = {
+  padding: "16px 8px 8px 8px",
+  width: "100%"
+}
+
+const itemDetailStyle = {
+  display: "flex"
+}
 
 const ListItem = class extends Component {
 
@@ -39,7 +60,10 @@ const ListItem = class extends Component {
     const width = 50;
     const height = undefined;
 
-    return <Draggable key={layer.id} draggableId={layer.id} index={index}>
+    return <Draggable
+      key={layer.id}
+      draggableId={layer.id}
+      index={index}>
       {(provided, snapshot) => (
         <div
           ref={provided.innerRef}
@@ -49,21 +73,25 @@ const ListItem = class extends Component {
             provided.draggableProps.style
           )}
         >
-          <div     {...provided.dragHandleProps}>
-            <DragHandleIcon
+          <div     {...provided.dragHandleProps} style={dragHandleWrapperStyle}>
+            <DragHandleIcon />
+          </div>
+          <div style={contentWrapperStyle}>
+            <div style={itemDetailStyle}>
+            <IIIFThumbnail
+              maxHeight={height}
+              maxWidth={width}
+              resource={resource}
+              style={imageStyle}
+            />
+            <span >{layer.label || layer.id}</span>
+            </div>
+            <Slider
+              disabled={!layer.visibility}
+              value={layer.clip * 100}
+              onChange={(e, value) => this.handleclipChange(resource.id, value)}
             />
           </div>
-          <div>{layer.label || layer.id}</div>
-          <IIIFThumbnail
-            maxHeight={height}
-            maxWidth={width}
-            resource={resource}
-          />
-          <Slider
-            disabled={!layer.visibility}
-            value={layer.clip * 100}
-            onChange={(e, value) => this.handleclipChange(resource.id, value)}
-          />
         </div>
       )}
     </Draggable>
