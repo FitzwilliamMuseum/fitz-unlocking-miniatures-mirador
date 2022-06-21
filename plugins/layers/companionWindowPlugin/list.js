@@ -52,7 +52,6 @@ const Layers = class extends Component {
     render() {
         const { canvasId, id, windowId, layerMetadata, layers, updateCustomLayers, toggleOrientation, layersOrientation } = this.props;
         const { width, height } = { height: undefined, width: 50 };
-        console.log("props", this.props)
 
         return <div>
             <CompanionWindow
@@ -80,7 +79,7 @@ const Layers = class extends Component {
 
                                 {layers.map((resource, index) => {
                                     const layer = {
-                                        opacity: 1,
+                                        clip: 1,
                                         visibility: true,
                                         id: resource.id,
                                         label: resource?.__jsonld?.label?.en?.[0],

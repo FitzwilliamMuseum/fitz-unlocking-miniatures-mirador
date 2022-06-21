@@ -17,7 +17,6 @@ export const customLayersReducer = (state = {}, action) => {
         }
       };
     case OLAMALU_CUSTOM_LAYERS_ORIENTATION:
-      console.log("reducer OLAMALU_CUSTOM_LAYERS_ORIENTATION",state)
       return {
         ...state,
         orientation: !state.orientation

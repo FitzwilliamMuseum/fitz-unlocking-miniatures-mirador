@@ -17,15 +17,15 @@ const ListItem = class extends Component {
 
   constructor(props) {
     super(props);
-    this.handleOpacityChange = this.handleOpacityChange.bind(this);
+    this.handleclipChange = this.handleclipChange.bind(this);
   }
 
 
-  handleOpacityChange(layerId, value) {
+  handleclipChange(layerId, value) {
     const { canvasId, updateCustomLayers, windowId, } = this.props;
 
     const payload = {
-      [layerId]: { opacity: value / 100.0 },
+      [layerId]: { clip: value / 100.0 },
     };
 
     updateCustomLayers(windowId, canvasId, payload);
@@ -61,8 +61,8 @@ const ListItem = class extends Component {
           />
           <Slider
             disabled={!layer.visibility}
-            value={layer.opacity * 100}
-            onChange={(e, value) => this.handleOpacityChange(resource.id, value)}
+            value={layer.clip * 100}
+            onChange={(e, value) => this.handleclipChange(resource.id, value)}
           />
         </div>
       )}

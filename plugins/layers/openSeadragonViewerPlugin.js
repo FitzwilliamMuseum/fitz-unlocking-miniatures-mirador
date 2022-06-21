@@ -34,7 +34,7 @@ const Layers = class extends Component {
     }
 
     items.forEach((item, i) => {
-      let layer = { opacity: 1 };
+      let layer = { clip: 1 };
       //The layer keys in OpenSeadragon are shorter, not sure why.
       //Should be a better way to index layers.
       //Update: These ids come directly from the manifest - choice item id and service id
@@ -47,8 +47,8 @@ const Layers = class extends Component {
       }
       const imageSize = item.getContentSize();
       const clip = !!layersOrientation ?
-        new OpenSeadragon.Rect(0, 0, imageSize.x, imageSize.y * layer.opacity) :
-        new OpenSeadragon.Rect(0, 0, imageSize.x * layer.opacity, imageSize.y);
+        new OpenSeadragon.Rect(0, 0, imageSize.x, imageSize.y * layer.clip) :
+        new OpenSeadragon.Rect(0, 0, imageSize.x * layer.clip, imageSize.y);
       item.setClip(clip);
     });
   }
