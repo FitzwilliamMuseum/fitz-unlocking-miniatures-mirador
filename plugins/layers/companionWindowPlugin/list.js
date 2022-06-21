@@ -4,6 +4,8 @@ import LayerListItem from './item';
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import IconButton from '@material-ui/core/IconButton';
+import FlipIcon from '@material-ui/icons/Flip';
 
 const reorder = (list, startIndex, endIndex) => {
     const result = Array.from(list);
@@ -48,8 +50,9 @@ const Layers = class extends Component {
     }
 
     render() {
-        const { canvasId, id, windowId, layerMetadata, layers, updateCustomLayers } = this.props;
+        const { canvasId, id, windowId, layerMetadata, layers, updateCustomLayers, toggleOrientation, layersOrientation } = this.props;
         const { width, height } = { height: undefined, width: 50 };
+        console.log("props", this.props)
 
         return <div>
             <CompanionWindow
@@ -57,6 +60,15 @@ const Layers = class extends Component {
                 windowId={windowId}
                 id={id}
             >
+                <div><span>Orientation</span>
+                    <IconButton onClick={toggleOrientation}>
+                        <FlipIcon
+                            aria-label="layers orientation"
+                            disabled color="primary"
+                            style={{ transform: !!layersOrientation ? "rotate(90deg)" : "" }}
+                        />
+                    </IconButton>
+                </div>
                 <DragDropContext onDragEnd={this.onDragEnd}>
                     <Droppable droppableId={this.droppableId}>
                         {(provided, snapshot) => (

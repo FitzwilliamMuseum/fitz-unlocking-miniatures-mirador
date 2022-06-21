@@ -1,10 +1,17 @@
-export const OLAMALU_UPDATE_CUSTOM_LAYERS = 'olamalu/update_custom_layers';
+export const OLAMALU_CUSTOM_LAYERS_UPDATE_LAYERS = 'olamalu/custom_layers_update_layers';
+export const OLAMALU_CUSTOM_LAYERS_ORIENTATION = 'olamalu/custom_layers_orientation';
 
 export function updateCustomLayers(windowId, canvasId, payload) {
     return {
         canvasId: canvasId,
         payload: payload,
-        type: OLAMALU_UPDATE_CUSTOM_LAYERS,
+        type: OLAMALU_CUSTOM_LAYERS_UPDATE_LAYERS,
         windowId: windowId
     };
+}
+
+export function toggleOrientation() {
+    return {
+        type: OLAMALU_CUSTOM_LAYERS_ORIENTATION
+    }
 }

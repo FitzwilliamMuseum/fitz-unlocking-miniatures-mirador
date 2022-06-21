@@ -11,6 +11,7 @@ const mapStateToProps = (state, { id, windowId }) => {
     canvasIds,
     layerMetadata: state.customLayers?.[windowId]?.[canvasId],
     layers: getSortedLayers(state, { canvasId, windowId }),
+    layersOrientation: state.customLayers?.orientation,
   }
 };
 
@@ -24,7 +25,7 @@ const Layers = class extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    const { viewer: { world }, layerMetadata } = this.props;
+    const { viewer: { world }, layerMetadata, layersOrientation } = this.props;
     if (!world || !layerMetadata) return;
 
     const items = [];
@@ -45,7 +46,9 @@ const Layers = class extends Component {
         }
       }
       const imageSize = item.getContentSize();
-      const clip = new OpenSeadragon.Rect(0, 0, imageSize.x * layer.opacity, imageSize.y);
+      const clip = !!layersOrientation ?
+        new OpenSeadragon.Rect(0, 0, imageSize.x, imageSize.y * layer.opacity) :
+        new OpenSeadragon.Rect(0, 0, imageSize.x * layer.opacity, imageSize.y);
       item.setClip(clip);
     });
   }
