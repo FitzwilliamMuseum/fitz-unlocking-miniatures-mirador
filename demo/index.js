@@ -19,14 +19,15 @@ const config = {
     sideBarOpen: true,
     allowClose: false,
     defaultSideBarPanel: 'annotations',
-  },
+
   panels: {
     info: true,
     attribution: true,
-    canvas: true,
+    canvas: false,
     annotations: true,
-    search: true,
-    // layers: false,
+    search: false,
+    layers: false,
+  },
   },
   workspace: {
     showZoomControls: true,
