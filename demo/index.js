@@ -8,26 +8,47 @@ const config = {
       manifestId: "images/manifest.json"
     }
   ],
-  theme: {
-    palette: {
-      primary: {
-        main: '#1967d2',
+  selectedTheme: 'cursed',
+  themes: {
+    cursed: {
+      palette: {
+        type: 'light',
+        primary: {
+          main: '#000000',
+        },
+        secondary: {
+          // main: '#7fff00',
+        },
+        shades: {
+          dark: '#000000',
+          // main: '#ffb6c1',
+          // light: '#7b68ee',     
+        },
       },
-    },
+    }
   },
+  // theme: {
+  //   palette: {
+  //     primary: {
+  //       main: '#000000',
+  //     },
+  //   },
+  // },
   window: {
     sideBarOpen: true,
     allowClose: false,
     defaultSideBarPanel: 'annotations',
-
-  panels: {
-    info: true,
-    attribution: true,
-    canvas: false,
-    annotations: true,
-    search: false,
-    layers: false,
-  },
+    allowTopMenuButton: false,
+    allowFullscreen: false,
+    allowMaximize: false,
+    panels: {
+      info: true,
+      attribution: true,
+      canvas: false,
+      annotations: true,
+      search: false,
+      layers: false,
+    },
   },
   workspace: {
     showZoomControls: true,
@@ -74,6 +95,6 @@ const config = {
 
 Mirador.viewer(config, [
   ...layersPlugin,
-  physicalPlugin,
+  ...physicalPlugin,
   // annotations
 ]);

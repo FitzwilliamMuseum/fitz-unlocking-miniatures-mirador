@@ -1,16 +1,7 @@
-/* eslint-disable max-len */
-/* eslint-disable no-param-reassign */
-/* eslint-disable prefer-template */
-import {
-  ClassName,
-  LocationMapping,
-  RulerDirections,
-  Units,
-} from './util';
+//Source https://github.com/ubleipzig/mirador-ruler-plugin
 
-/**
-  * util class containing the ruler calculation methods
-  */
+import { Units, RulerDirections, LocationMapping } from "./constants";
+
 export class DocumentRuler {
   /**
   *
@@ -53,11 +44,11 @@ export class DocumentRuler {
     };
 
     this.parentElement = document.createElement('div');
-    this.parentElement.className = ClassName;
+    this.parentElement.className = 'plugin-ruler';
     this.parentElement.appendChild(this.elements.horizontal.ruler);
     this.parentElement.appendChild(this.elements.vertical.ruler);
     this.parentElement.appendChild(this.elements.unit);
-    this.viewer.container =  document.querySelector(`#demo .openseadragon-container`),
+    this.viewer.container = document.querySelector(`#demo .openseadragon-container`);
     this.viewer.container.appendChild(this.parentElement);
     // ToDo use class
     this.parentElement.style.visibility = options.show ? 'visible' : 'hidden';
