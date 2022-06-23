@@ -103,7 +103,7 @@ const Layers = class extends Component {
                                         ...(layerMetadata || {})[resource.id],
                                     };
 
-                                    return <ListItem style={listItemStyle}>
+                                    return <ListItem style={listItemStyle} key={resource.id}>
                                         <LayerListItem
                                             index={index}
                                             layer={layer}

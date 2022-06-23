@@ -1,5 +1,5 @@
 import Mirador from 'mirador';
-import { layersPlugin, physicalPlugin, annotations } from '~/plugins';
+import { layersPlugin, physicalPlugin } from '~/plugins';
 
 const config = {
   id: 'demo',
@@ -8,32 +8,20 @@ const config = {
       manifestId: "images/manifest.json"
     }
   ],
-  selectedTheme: 'cursed',
+  selectedTheme: 'fitzwilliam',
   themes: {
-    cursed: {
+    fitzwilliam: {
       palette: {
         type: 'light',
         primary: {
           main: '#000000',
         },
-        secondary: {
-          // main: '#7fff00',
-        },
         shades: {
-          dark: '#000000',
-          // main: '#ffb6c1',
-          // light: '#7b68ee',     
+          dark: '#000000', //canvase background
         },
       },
     }
   },
-  // theme: {
-  //   palette: {
-  //     primary: {
-  //       main: '#000000',
-  //     },
-  //   },
-  // },
   window: {
     sideBarOpen: true,
     allowClose: false,
