@@ -21,7 +21,7 @@ const orientationStyle = {
 
 const listStyle = {
     padding: "0px",
-    height: "70vh"
+    height: "75vh"
 }
 
 const listItemStyle = {
