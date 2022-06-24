@@ -1,6 +1,6 @@
 image: olamalu/node-rsync:16
 
-pages:
+build:
   tags:
     - coryphe
   stage: build
@@ -24,7 +24,7 @@ deploy_prod:
     - coryphe
   stage: deploy
   script:
-    - rsync -av public/ gitlab-runner@78.129.168.4:/var/www/gitlab-runner-static/miniatures.fitz.ms/
+    - rsync -av public/ gitlab-runner@78.129.168.4:/var/www/gitlab-runner-static/miniatures.fitz.ms/mirador-demo/
   environment:
     name: production
     url: https://minatures.fitzwilliam.ms
