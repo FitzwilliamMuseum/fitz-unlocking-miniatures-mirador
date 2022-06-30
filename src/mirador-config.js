@@ -3,7 +3,7 @@ export default {
   id: 'mirador-root',
   windows: [
     {
-      manifestId: "http://miniatures.fitz.ms/mirador-demo/iiif/3868/manifest.json",
+      manifestId: "https://miniatures.fitz.ms/mirador-demo/iiif/3868/manifest.json",
       maximized: true,
     }
   ],
