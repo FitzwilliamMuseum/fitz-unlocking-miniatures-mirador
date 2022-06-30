@@ -1,4 +1,4 @@
-image: olamalu/node-rsync:16
+image: node:16
 
 pages:
   stage: build
