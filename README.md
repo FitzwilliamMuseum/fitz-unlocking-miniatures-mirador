@@ -1,4 +1,6 @@
-# Olamalu Mirador plugins
+# Fitzwilliam Miniatures Mirador viewer
+
+React app that wraps Miradar and adds the following plugins:
 
 - Layers
 - Ruler
@@ -10,7 +12,7 @@ Tested with Node version 16.15.1
 
 ```
 yarn
-yarn dev
+yarn start
 ```
 
 ## Building
@@ -20,4 +22,4 @@ yarn
 yarn build
 ```
 
-Output dir `dist/plugins`
+Output dir `dist`

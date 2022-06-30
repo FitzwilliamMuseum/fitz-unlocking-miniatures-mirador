@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import IIIFThumbnail from 'mirador/dist/es/src/containers/IIIFThumbnail';
 import Slider from '@material-ui/core/Slider';
 import DragHandleIcon from '@material-ui/icons/DragHandleSharp';
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { Draggable } from "react-beautiful-dnd";
 
 const getItemStyle = (isDragging, draggableStyle) => ({
   userSelect: "none",

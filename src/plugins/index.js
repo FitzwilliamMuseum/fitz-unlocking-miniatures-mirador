@@ -1,15 +1,12 @@
 import layersPlugin from "./layers";
 import physicalPlugin from "./physical";
-import annotations from "./annotations";
 
 export {
     layersPlugin,
-    physicalPlugin,
-    annotations
+    physicalPlugin
 }
 
 export default [
     layersPlugin,
-    physicalPlugin,
-    annotations
+    physicalPlugin
 ]

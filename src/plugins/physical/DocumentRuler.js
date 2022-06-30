@@ -48,7 +48,7 @@ export class DocumentRuler {
     this.parentElement.appendChild(this.elements.horizontal.ruler);
     this.parentElement.appendChild(this.elements.vertical.ruler);
     this.parentElement.appendChild(this.elements.unit);
-    this.viewer.container = document.querySelector(`#demo .openseadragon-container`);
+    this.viewer.container = document.querySelector(`.openseadragon-container`);
     this.viewer.container.appendChild(this.parentElement);
     // ToDo use class
     this.parentElement.style.visibility = options.show ? 'visible' : 'hidden';

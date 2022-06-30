@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { getSortedLayers, getVisibleCanvasIds } from 'mirador/dist/es/src/state/selectors';
 import OpenSeadragon from 'openseadragon';
 
-const mapStateToProps = (state, { id, windowId }) => {
+const mapStateToProps = (state, { windowId }) => {
   const canvasIds = getVisibleCanvasIds(state, { windowId });
   const canvasId = canvasIds[0];
   return {

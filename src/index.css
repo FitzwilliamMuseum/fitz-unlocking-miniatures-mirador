@@ -1,0 +1,120 @@
+html,
+body,
+#app {
+  height: 100%;
+  font-size: 18px;
+  font-family: "Lato", Helvetica, sans-serif;
+  color: #333447;
+  line-height: 1.5;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+h4 {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Main menu */
+
+ul.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 12.5px 12.5px 12.5px 5vw;
+  margin: 0;
+}
+
+ul.main-menu li {
+  margin-right: 25px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.main-menu a {
+  color: #333447;
+}
+
+/* Main content */
+
+.main-content {
+  height: 100%;
+  padding: 25px 5vw;
+}
+
+/* Mirador */
+
+#mirador-root {
+  position: relative;
+  height: 100%;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #000000;
+  padding: 25px 5vw;
+  padding: 25px 5vw;
+}
+
+.footer,
+.footer a {
+  color: #ffffff;
+}
+
+.footer--social-media {
+  display: flex;
+}
+
+.footer--social-media a {
+  margin-right: 50px;
+}
+
+.footer--main {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.footer--quick-links,
+.footer--contact {
+  flex: 3;
+}
+
+.footer--logo {
+  flex: 6;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer--copyright {
+  border-top: 1px solid #d2d2d2;
+  padding-top: 12.5px;
+  font-size: 0.8rem;
+}
+
+.footer--copyright a {
+  border-right: 1px solid #d2d2d2;
+  padding-right: 25px;
+  margin-right: 25px;
+}
