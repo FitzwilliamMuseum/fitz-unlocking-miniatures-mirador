@@ -3,16 +3,7 @@
 
 export default {
   id: 'mirador-root',
-  windows: [
-    {
-      manifestId: "https://miniatures.fitz.ms/mirador-demo/iiif/3868/manifest.json",
-      maximized: false,
-    },
-    // {
-    //   manifestId: "https://miniatures.fitz.ms/mirador-demo/iiif/3869/manifest.json",
-    //   maximized: false,
-    // },
-  ],
+  windows: [],
   selectedTheme: 'fitzwilliam',
   themes: {
     fitzwilliam: {
@@ -50,5 +41,6 @@ export default {
     en: {
       openCompanionWindow_CustomLayers: 'Custom Layers'
     }
-  }
+  },
+  catalog: []
 };

@@ -7,14 +7,23 @@ import Header from './components/header.js';
 import Footer from './components/footer.js';
 import './index.css'
 
-async function initMirador() {
-  const response = await fetch("https://unlocking-miniatures.fitz.ms/items/miniatures/");
+async function initMirador(manifestId) {
+  const windows = [];
+  if (Array.isArray(manifestId)) {
+    manifestId.forEach(item => {
+      windows.push({
+        manifestId: item
+      })
+    })
+  }
+  const response = await fetch("https://unlocking-miniatures.fitz.ms/items/miniatures/?fields%5B%5D=accession_number");
   const data = (await response.json()).data;
   const catalog = data.map(item => ({
     manifestId: `https://miniatures.fitz.ms/mirador-demo/iiif/${item.accession_number}/manifest.json`
   }));
   mirador.viewer({
     ...config,
+    windows,
     catalog
   }, miradorPlugins);
 }
@@ -22,7 +31,9 @@ async function initMirador() {
 export default class App extends Component {
 
   componentDidMount() {
-    initMirador();
+    let params = new URLSearchParams(document.location.search);
+    let manifestId = params.getAll("manifestId[]");
+    initMirador(manifestId);
   }
 
   render() {

@@ -23,3 +23,9 @@ yarn build
 ```
 
 Output dir `dist`
+
+## URL Query parameters
+
+Pass `manifestId[]` query parameters.
+
+http://localhost:3000/?manifestId[]=https://miniatures.fitz.ms/mirador-demo/iiif/3868/manifest.json&manifestId[]=https://miniatures.fitz.ms/mirador-demo/iiif/3869/manifest.json
