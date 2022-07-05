@@ -43,7 +43,7 @@ const ListItem = class extends Component {
 
 
   handleclipChange(layerId, value) {
-    const { canvasId, updateCustomLayers, windowId, } = this.props;
+    const { canvasId, updateCustomLayers, windowId } = this.props;
 
     const payload = {
       [layerId]: { clip: value / 100.0 },
@@ -73,18 +73,18 @@ const ListItem = class extends Component {
             provided.draggableProps.style
           )}
         >
-          <div     {...provided.dragHandleProps} style={dragHandleWrapperStyle}>
+          <div {...provided.dragHandleProps} style={dragHandleWrapperStyle}>
             <DragHandleIcon />
           </div>
           <div style={contentWrapperStyle}>
             <div style={itemDetailStyle}>
-            <IIIFThumbnail
-              maxHeight={height}
-              maxWidth={width}
-              resource={resource}
-              style={imageStyle}
-            />
-            <span >{layer.label || layer.id}</span>
+              <IIIFThumbnail
+                maxHeight={height}
+                maxWidth={width}
+                resource={resource}
+                style={imageStyle}
+              />
+              <span>{layer.label || layer.id}</span>
             </div>
             <Slider
               disabled={!layer.visibility}
@@ -96,7 +96,6 @@ const ListItem = class extends Component {
       )}
     </Draggable>
   }
-
 }
 
 export default ListItem;

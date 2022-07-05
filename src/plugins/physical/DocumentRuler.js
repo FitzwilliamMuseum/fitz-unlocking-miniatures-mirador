@@ -1,4 +1,5 @@
 //Source https://github.com/ubleipzig/mirador-ruler-plugin
+//License MIT https://github.com/ubleipzig/mirador-ruler-plugin/blob/master/LICENSE
 
 import { Units, RulerDirections, LocationMapping } from "./constants";
 
