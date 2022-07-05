@@ -11,7 +11,7 @@ const mapStateToProps = (state, { windowId }) => {
     canvasIds,
     layerMetadata: state.customLayers?.[windowId]?.[canvasId],
     layers: getSortedLayers(state, { canvasId, windowId }),
-    layersOrientation: state.customLayers?.orientation,
+    layersOrientation: state.customLayers?.orientation?.[windowId],
   }
 };
 

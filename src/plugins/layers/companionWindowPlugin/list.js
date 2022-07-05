@@ -77,7 +77,7 @@ const Layers = class extends Component {
             >
                 <div style={orientationStyle}>
                     <span>Orientation</span>
-                    <IconButton onClick={toggleOrientation}>
+                    <IconButton onClick={() => toggleOrientation(windowId)}>
                         <FlipIcon
                             aria-label="layers orientation"
                             disabled color="primary"

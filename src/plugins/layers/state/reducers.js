@@ -19,7 +19,10 @@ export const customLayersReducer = (state = {}, action) => {
     case OLAMALU_CUSTOM_LAYERS_ORIENTATION:
       return {
         ...state,
-        orientation: !state.orientation
+        orientation: {
+          ...state.orientation,
+          [action.windowId]: !state?.orientation?.[action.windowId]
+        }
       };
     default:
       return state;

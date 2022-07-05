@@ -8,10 +8,10 @@ export default {
       manifestId: "https://miniatures.fitz.ms/mirador-demo/iiif/3868/manifest.json",
       maximized: false,
     },
-    // {
-    //   manifestId: "https://miniatures.fitz.ms/mirador-demo/iiif/3869/manifest.json",
-    //   maximized: false,
-    // },
+    {
+      manifestId: "https://miniatures.fitz.ms/mirador-demo/iiif/3869/manifest.json",
+      maximized: false,
+    },
   ],
   selectedTheme: 'fitzwilliam',
   themes: {

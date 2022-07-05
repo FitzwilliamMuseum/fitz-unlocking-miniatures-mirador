@@ -10,8 +10,9 @@ export function updateCustomLayers(windowId, canvasId, payload) {
     };
 }
 
-export function toggleOrientation() {
+export function toggleOrientation(windowId) {
     return {
-        type: OLAMALU_CUSTOM_LAYERS_ORIENTATION
+        type: OLAMALU_CUSTOM_LAYERS_ORIENTATION,
+        windowId
     }
 }
