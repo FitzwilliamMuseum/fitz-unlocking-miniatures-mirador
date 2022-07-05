@@ -42,5 +42,16 @@ export default {
       openCompanionWindow_CustomLayers: 'Custom Layers'
     }
   },
+  requests: {
+    postprocessors: [
+      //Mutate network request responses
+      (url, action) => {
+        if (action.json && action.json['@context'] == 'http://iiif.io/api/image/3/context.json') {
+          //Ensure image info ids are using https
+          action.json.id = action.json.id.replace("http://", "https://")
+        }
+      }
+    ]
+  },
   catalog: []
 };
