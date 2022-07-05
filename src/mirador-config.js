@@ -1,11 +1,17 @@
 
+//https://github.com/ProjectMirador/mirador/blob/master/src/config/settings.js
+
 export default {
   id: 'mirador-root',
   windows: [
     {
       manifestId: "https://miniatures.fitz.ms/mirador-demo/iiif/3868/manifest.json",
-      maximized: true,
-    }
+      maximized: false,
+    },
+    // {
+    //   manifestId: "https://miniatures.fitz.ms/mirador-demo/iiif/3869/manifest.json",
+    //   maximized: false,
+    // },
   ],
   selectedTheme: 'fitzwilliam',
   themes: {
@@ -23,22 +29,22 @@ export default {
   },
   window: {
     sideBarOpen: true,
-    allowClose: false,
-    defaultSideBarPanel: 'annotations',
+    allowClose: true,
+    defaultSideBarPanel: 'info',
     allowTopMenuButton: false,
     allowFullscreen: true,
-    allowMaximize: false,
+    allowMaximize: true,
     panels: {
       info: true,
       attribution: true,
       canvas: false,
       annotations: true,
       search: false,
-      layers: false,
+      layers: true,
     },
   },
   workspaceControlPanel: {
-    enabled: false,
+    enabled: true,
   },
   translations: {
     en: {
