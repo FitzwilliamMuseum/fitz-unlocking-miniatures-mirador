@@ -4,7 +4,6 @@ React app that wraps Miradar and adds the following plugins:
 
 - Layers
 - Ruler
-- Annotations
 
 ## Developing
 
