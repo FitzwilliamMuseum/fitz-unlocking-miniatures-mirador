@@ -43,13 +43,17 @@ const ListItem = class extends Component {
 
 
   handleclipChange(layerId, value) {
-    const { canvasId, updateCustomLayers, windowId } = this.props;
+    const { canvasId, layersOpacityReset, updateCustomLayers, windowId } = this.props;
 
-    const payload = {
+    //reset opacity of all layers
+    layersOpacityReset();
+
+    //update curtain
+    const payloadCurtain = {
       [layerId]: { clip: value / 100.0 },
     };
 
-    updateCustomLayers(windowId, canvasId, payload);
+    updateCustomLayers(windowId, canvasId, payloadCurtain);
   }
 
 

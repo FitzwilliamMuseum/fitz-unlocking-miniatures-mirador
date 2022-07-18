@@ -33,6 +33,7 @@ const Layers = class extends Component {
     constructor(props) {
         super(props);
         this.onDragEnd = this.onDragEnd.bind(this);
+        this.layersOpacityReset = this.layersOpacityReset.bind(this);
         this.droppableId = "droppable";
     }
 
@@ -55,6 +56,16 @@ const Layers = class extends Component {
             return acc;
         }, {});
 
+        updateLayers(windowId, canvasId, payload);
+    }
+
+    layersOpacityReset() {
+        const { windowId, canvasId, layers, updateLayers, } = this.props;
+
+        const payload = {};
+        layers.map((resource) => {
+            payload[resource.id] = { opacity: 1 };
+        })
         updateLayers(windowId, canvasId, payload);
     }
 
@@ -110,6 +121,7 @@ const Layers = class extends Component {
                                             resource={resource}
                                             windowId={windowId}
                                             canvasId={canvasId}
+                                            layersOpacityReset={this.layersOpacityReset}
                                             updateCustomLayers={updateCustomLayers}
                                         ></LayerListItem>
                                     </ListItem>
