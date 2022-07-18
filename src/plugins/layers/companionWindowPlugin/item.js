@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import IIIFThumbnail from 'mirador/dist/es/src/containers/IIIFThumbnail';
 import Slider from '@material-ui/core/Slider';
 import DragHandleIcon from '@material-ui/icons/DragHandleSharp';
+import VisibilityIcon from '@material-ui/icons/VisibilitySharp';
+import VisibilityOffIcon from '@material-ui/icons/VisibilityOffSharp';
+import MoveToTopIcon from '@material-ui/icons/VerticalAlignTopSharp';
+import IconButton from '@material-ui/core/IconButton';
+import { MiradorMenuButton } from 'mirador/dist/es/src/components/MiradorMenuButton';
 import { Draggable } from "react-beautiful-dnd";
 
 const getItemStyle = (isDragging, draggableStyle) => ({
@@ -59,7 +64,7 @@ const ListItem = class extends Component {
 
   render() {
 
-    const { layer, resource, index } = this.props;
+    const { layer, resource, index, toggleLayerVisibility, moveToTop } = this.props;
 
     const width = 50;
     const height = undefined;
@@ -88,7 +93,23 @@ const ListItem = class extends Component {
                 resource={resource}
                 style={imageStyle}
               />
-              <span>{layer.label || layer.id}</span>
+              <div>
+                <div>{layer.label || layer.id}</div>
+                <MiradorMenuButton
+                  size="small"
+                  aria-label={layer.visibility ? 'Hide layer' : 'Show layer'}
+                  onClick={toggleLayerVisibility}>
+                  {layer.visibility ? <VisibilityIcon /> : <VisibilityOffIcon />}
+                </MiradorMenuButton>
+                {layer.index !== 0 && (
+                  <MiradorMenuButton
+                    size="small"
+                    aria-label={'Move layer to top'}
+                    onClick={moveToTop}>
+                    <MoveToTopIcon />
+                  </MiradorMenuButton>
+                )}
+              </div>
             </div>
             <Slider
               disabled={!layer.visibility}

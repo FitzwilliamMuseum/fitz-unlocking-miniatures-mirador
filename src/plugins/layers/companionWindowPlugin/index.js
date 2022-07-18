@@ -1,7 +1,7 @@
 import List from './list';
 import { updateCustomLayers, toggleOrientation } from '../state/actions';
 import { customLayersReducer } from '../state/reducers';
-import { getVisibleCanvasIds, getSortedLayers } from "mirador/dist/es/src/state/selectors"
+import { getVisibleCanvasIds, getSortedLayers, getLayers } from "mirador/dist/es/src/state/selectors"
 import { updateLayers } from "mirador/dist/es/src/state/actions"
 
 const mapStateToProps = (state, { windowId }) => {
@@ -9,8 +9,9 @@ const mapStateToProps = (state, { windowId }) => {
     const canvasId = canvasIds[0];
     return {
         canvasId,
-        layerMetadata: state?.customLayers?.[windowId]?.[canvasId],
+        customLayerMetadata: state?.customLayers?.[windowId]?.[canvasId],
         layers: getSortedLayers(state, { canvasId, windowId }),
+        layerMetadata: getLayers(state, { canvasId, windowId }),
         layersOrientation: !!state.customLayers?.orientation?.[windowId],
     }
 };

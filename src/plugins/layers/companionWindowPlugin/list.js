@@ -34,6 +34,8 @@ const Layers = class extends Component {
         super(props);
         this.onDragEnd = this.onDragEnd.bind(this);
         this.layersOpacityReset = this.layersOpacityReset.bind(this);
+        this.setLayerVisibility = this.setLayerVisibility.bind(this);
+        this.moveToTop = this.moveToTop.bind(this);
         this.droppableId = "droppable";
     }
 
@@ -69,11 +71,35 @@ const Layers = class extends Component {
         updateLayers(windowId, canvasId, payload);
     }
 
+    setLayerVisibility(layerId, value) {
+        const { canvasId, updateLayers, windowId, } = this.props;
+
+        const payload = {
+            [layerId]: { visibility: value },
+        };
+
+        updateLayers(windowId, canvasId, payload);
+    }
+
+    moveToTop(layerId) {
+        const { canvasId, layers, updateLayers, windowId, } = this.props;
+
+        const sortedLayers = reorder(layers.map(l => l.id), layers.findIndex(l => l.id === layerId), 0);
+
+        const payload = layers.reduce((acc, layer) => {
+            acc[layer.id] = { index: sortedLayers.indexOf(layer.id) };
+            return acc;
+        }, {});
+
+        updateLayers(windowId, canvasId, payload);
+    }
+
     render() {
         const { canvasId,
             id,
             windowId,
             layerMetadata,
+            customLayerMetadata,
             layers,
             updateCustomLayers,
             toggleOrientation,
@@ -112,6 +138,7 @@ const Layers = class extends Component {
                                         id: resource.id,
                                         label: resource?.__jsonld?.label?.en?.[0],
                                         ...(layerMetadata || {})[resource.id],
+                                        ...(customLayerMetadata || {})[resource.id],
                                     };
 
                                     return <ListItem style={listItemStyle} key={resource.id}>
@@ -123,9 +150,10 @@ const Layers = class extends Component {
                                             canvasId={canvasId}
                                             layersOpacityReset={this.layersOpacityReset}
                                             updateCustomLayers={updateCustomLayers}
+                                            toggleLayerVisibility={() => this.setLayerVisibility(resource.id, !layer.visibility)}
+                                            moveToTop={() => this.moveToTop(resource.id)}
                                         ></LayerListItem>
                                     </ListItem>
-
                                 })}
                                 {provided.placeholder}
                             </List>
