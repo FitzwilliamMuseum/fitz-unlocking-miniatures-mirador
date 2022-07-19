@@ -5,6 +5,7 @@ import config from "./mirador-config.js";
 import miradorPlugins from './plugins';
 import Header from './components/header.js';
 import Footer from './components/footer.js';
+import Onboarding from './components/onboarding.js';
 import './index.css'
 
 async function initMirador(manifestId) {
@@ -43,6 +44,7 @@ export default class App extends Component {
         <div id={config.id} />
       </div>
       <Footer />
+      <Onboarding />
     </React.Fragment>
   }
 }

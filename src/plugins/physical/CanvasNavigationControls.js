@@ -44,13 +44,15 @@ function WindowCanvasNavigationControls(props) {
         height: '100%',
         margin: '8px',
     }}>
-        <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-            borderRadius: '50px',
-            zIndex: 50,
-        }}>
+        <div
+            className='olamalu-navigation-controls'
+            style={{
+                display: 'flex',
+                flexDirection: 'column',
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                borderRadius: '50px',
+                zIndex: 50,
+            }}>
             <IconButton aria-label="Zoom in" onClick={onClickZoomIn}><AddIcon /></IconButton>
             <IconButton aria-label="Zoom out" onClick={onClickZoomOut}><RemoveIcon /></IconButton>
             <IconButton aria-label="Recet zoom" onClick={zoomToWorld}><RestoreZoomIcon /></IconButton>

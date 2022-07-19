@@ -34,7 +34,7 @@ export default {
       layers: true,
     },
   },
-  workspace:{
+  workspace: {
     showZoomControls: true,
   },
   workspaceControlPanel: {
