@@ -20,8 +20,11 @@ async function initMirador(manifestId) {
   const response = await fetch("https://unlocking-miniatures.fitz.ms/items/miniatures/?fields%5B%5D=accession_number");
   const data = (await response.json()).data;
   const catalog = data.map(item => ({
-    manifestId: `https://miniatures.fitz.ms/mirador-demo/iiif/${item.accession_number}/manifest.json`
+    manifestId: `https://miniatures.fitz.ms/iiif/${item.accession_number}/manifest.json`
   }));
+  if (windows.length < 1) {
+    windows.push(catalog[0]);
+  }
   mirador.viewer({
     ...config,
     windows,

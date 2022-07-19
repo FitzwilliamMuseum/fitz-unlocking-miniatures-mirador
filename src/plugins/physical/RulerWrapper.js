@@ -36,21 +36,22 @@ const PhysicalRuler = class extends Component {
 
     attachRuler() {
         const { viewer, canvasWorld } = this.props;
-        const service = canvasWorld?.canvases[0]?.canvas?.__jsonld?.service;
-        if (service && service.profile === 'http://iiif.io/api/annex/services/physdim') {
+        console.log("canvasWorld",canvasWorld)
+        const physicalDimensions = canvasWorld?.canvases[0]?.canvas?.__jsonld?.physicalDimensions;
+        if (physicalDimensions && physicalDimensions.profile === 'http://iiif.io/api/annex/extensions/physdim') {
             const millimetersPerPhysicalUnit = {
                 cm: 10.0,
                 in: 25.4,
                 mm: 1.0,
             };
-            const pixelsPerMillimeter = 1 / (millimetersPerPhysicalUnit[service.physicalUnits] * service.physicalScale);
+            const pixelsPerMillimeter = 1 / (millimetersPerPhysicalUnit[physicalDimensions.physicalUnits] * physicalDimensions.physicalScale);
 
             this.ruler = this.ruler || new DocumentRuler({
-                 viewer,
-                  show: true, 
-                 location: 'bottom-left' ,
-                 labelsEvery: 1
-                });
+                viewer,
+                show: true,
+                location: 'bottom-left',
+                labelsEvery: 1
+            });
             this.ruler.PixelsPerMillimeter = pixelsPerMillimeter;
             this.ruler.register();
 
