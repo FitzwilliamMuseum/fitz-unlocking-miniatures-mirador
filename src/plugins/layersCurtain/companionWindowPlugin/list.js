@@ -101,14 +101,14 @@ const Layers = class extends Component {
             layerMetadata,
             customLayerMetadata,
             layers,
-            updateCustomLayers,
+            updateLayersCurtain,
             toggleOrientation,
             layersOrientation
         } = this.props;
 
         return <div>
             <CompanionWindow
-                title="Custom Layers"
+                title="Layers Curtain"
                 windowId={windowId}
                 id={id}
             >
@@ -149,7 +149,7 @@ const Layers = class extends Component {
                                             windowId={windowId}
                                             canvasId={canvasId}
                                             layersOpacityReset={this.layersOpacityReset}
-                                            updateCustomLayers={updateCustomLayers}
+                                            updateLayersCurtain={updateLayersCurtain}
                                             toggleLayerVisibility={() => this.setLayerVisibility(resource.id, !layer.visibility)}
                                             moveToTop={() => this.moveToTop(resource.id)}
                                         ></LayerListItem>

@@ -6,8 +6,8 @@ const mapStateToProps = (state, { windowId }) => {
   const canvasIds = getVisibleCanvasIds(state, { windowId });
   const canvasId = canvasIds[0];
   return {
-    layerMetadata: state.customLayers?.[windowId]?.[canvasId],
-    layersOrientation: state.customLayers?.orientation?.[windowId],
+    layerMetadata: state.layersCurtain?.[windowId]?.[canvasId],
+    layersOrientation: state.layersCurtain?.orientation?.[windowId],
   }
 };
 

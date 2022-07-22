@@ -14,8 +14,8 @@ const steps = [
         intro: 'Control opacity of individual layers'
     },
     {
-        element: 'button[role="tab"][aria-label="Custom Layers"]',
-        title: 'Custom Layers',
+        element: 'button[role="tab"][aria-label="Layers Curtain"]',
+        title: 'Layers Curtain',
         intro: 'View layers side be side with the curtain slider'
     },
     {

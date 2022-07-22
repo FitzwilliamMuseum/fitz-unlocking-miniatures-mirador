@@ -2,8 +2,10 @@
 
 React app that wraps Miradar and adds the following plugins:
 
-- Layers
-- Ruler
+- Layers curtain `src/plugins/layersCurtain`
+- Physical ruler `src/plugins/physicalRuler`
+
+Physical ruler plugin based on https://github.com/ubleipzig/mirador-ruler-plugin
 
 ## Developing
 
@@ -27,4 +29,10 @@ Output dir `dist`
 
 Pass `manifestId[]` query parameters.
 
-http://localhost:3000/?manifestId[]=https://miniatures.fitz.ms/mirador-demo/iiif/3868/manifest.json&manifestId[]=https://miniatures.fitz.ms/mirador-demo/iiif/3869/manifest.json
+http://localhost:3000/?manifestId[]=https://github.fitzmuseum.cam.ac.uk/fitz-unlocking-miniatures-iiif-generator/FM%203868/manifest.json&manifestId[]=https://github.fitzmuseum.cam.ac.uk/fitz-unlocking-miniatures-iiif-generator/FM%203869/manifest.json
+
+## Onboardign
+
+Onboardign is implemented as a React componet using https://introjs.com/.
+
+Modify `steps` in `src/components/onboarding.js`.

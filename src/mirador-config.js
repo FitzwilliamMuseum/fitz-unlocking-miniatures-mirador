@@ -42,7 +42,7 @@ export default {
   },
   translations: {
     en: {
-      openCompanionWindow_CustomLayers: 'Custom Layers'
+      openCompanionWindow_LayersCurtain: 'Layers Curtain'
     }
   },
   requests: {

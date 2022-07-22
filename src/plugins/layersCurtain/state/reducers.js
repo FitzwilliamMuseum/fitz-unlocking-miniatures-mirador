@@ -1,6 +1,6 @@
 import { OLAMALU_CUSTOM_LAYERS_UPDATE_LAYERS, OLAMALU_CUSTOM_LAYERS_ORIENTATION } from './actions';
 
-export const customLayersReducer = (state = {}, action) => {
+export const layersCurtainReducer = (state = {}, action) => {
   switch (action.type) {
     case OLAMALU_CUSTOM_LAYERS_UPDATE_LAYERS:
       return {

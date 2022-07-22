@@ -1,7 +1,7 @@
 export const OLAMALU_CUSTOM_LAYERS_UPDATE_LAYERS = 'olamalu/custom_layers_update_layers';
 export const OLAMALU_CUSTOM_LAYERS_ORIENTATION = 'olamalu/custom_layers_orientation';
 
-export function updateCustomLayers(windowId, canvasId, payload) {
+export function updateLayersCurtain(windowId, canvasId, payload) {
     return {
         canvasId: canvasId,
         payload: payload,

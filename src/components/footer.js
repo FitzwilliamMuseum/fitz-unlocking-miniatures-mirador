@@ -16,7 +16,7 @@ export default function () {
         ],
         socialMedia: [
             { type: 'twitter', url: 'https://www.twitter.com/fitzwilliam', 'title': '@FitzProjectHandle' },
-            { type: 'youtube', url: 'https://www.twitter.com/fitzwilliam', 'title': 'on YouTube' },
+            { type: 'youtube', url: 'https://www.youtube.com/c/FitzMuseum', 'title': 'on YouTube' },
         ]
     }
 

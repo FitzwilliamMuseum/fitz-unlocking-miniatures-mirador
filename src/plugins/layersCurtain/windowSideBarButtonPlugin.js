@@ -1,7 +1,7 @@
 import React from 'react';
 import { getTheme } from '../util';
 
-const contentId = "CustomLayers";
+const contentId = "LayersCurtain";
 
 function getCompanionWindowActive(state) {
   return Object.values(state.companionWindows)

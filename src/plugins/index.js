@@ -1,12 +1,12 @@
-import layersPlugin from "./layers";
-import physicalPlugin from "./physical";
+import layersCurtainPlugin from "./layersCurtain";
+import physicalRulerPlugin from "./physicalRuler";
 
 export {
-    layersPlugin,
-    physicalPlugin
+    layersCurtainPlugin,
+    physicalRulerPlugin
 }
 
 export default [
-    layersPlugin,
-    physicalPlugin
+    layersCurtainPlugin,
+    physicalRulerPlugin
 ]
