@@ -4,11 +4,11 @@ export default function () {
 
     const content = {
         quickLinks: [
-            { link: '/', title: 'Home' },
-            { link: '/collections', title: 'Collections' }
+            { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/', title: 'Home' },
+            { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/collections', title: 'Collections' }
         ],
         contact: [
-            { line: "The Fizwilliam Museum" },
+            { line: "The Fitzwilliam Museum" },
             { line: "University of Cambridge" }
         ],
         footerLogos: [

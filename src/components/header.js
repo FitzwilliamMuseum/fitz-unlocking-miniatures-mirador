@@ -2,8 +2,8 @@ import React from "react";
 
 export default function () {
     const mainMenu = [
-        { link: '/', title: 'Home' },
-        { link: '/collections', title: 'Collections' }
+        { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/', title: 'Home' },
+        { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/collections', title: 'Collections' }
     ]
     return (
         <React.Fragment>
