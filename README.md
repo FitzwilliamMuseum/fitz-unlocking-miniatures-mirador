@@ -1,5 +1,7 @@
 # Fitzwilliam Miniatures Mirador viewer
 
+http://miniatures-mirador.fitzmuseum.cam.ac.uk/
+
 React app that wraps Miradar and adds the following plugins:
 
 - Layers curtain `src/plugins/layersCurtain`
@@ -29,7 +31,7 @@ Output dir `dist`
 
 Pass `manifestId[]` query parameters.
 
-http://localhost:3000/?manifestId[]=https://github.fitzmuseum.cam.ac.uk/fitz-unlocking-miniatures-iiif-generator/FM%203868/manifest.json&manifestId[]=https://github.fitzmuseum.cam.ac.uk/fitz-unlocking-miniatures-iiif-generator/FM%203869/manifest.json
+http://miniatures-mirador.fitzmuseum.cam.ac.uk/?manifestId[]=https://miniatures-iiif.fitzmuseum.cam.ac.uk/FM%203868/manifest.json&manifestId[]=https://miniatures-iiif.fitzmuseum.cam.ac.uk/FM%203869/manifest.json
 
 ## Onboardign
 

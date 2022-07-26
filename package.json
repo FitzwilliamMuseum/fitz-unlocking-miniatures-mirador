@@ -1,5 +1,5 @@
 {
-  "name": "olamalu-mirador-plugins",
+  "name": "unlocking-miniatures-mirador",
   "version": "1.0.0",
   "description": "Mirador viewer for Fitzwilliam Miniatures",
   "scripts": {
@@ -21,6 +21,4 @@
     "nwb": "0.25.x"
   },
   "author": "Olamalu",
-  "license": "MIT",
-  "repository": ""
 }
