@@ -20,7 +20,7 @@ async function initMirador(manifestId) {
   const response = await fetch("https://unlocking-miniatures.fitz.ms/items/miniatures/?fields%5B%5D=accession_number");
   const data = (await response.json()).data;
   const catalog = data.map(item => ({
-    manifestId: `https://github.fitzmuseum.cam.ac.uk/fitz-unlocking-miniatures-iiif-generator/${item.accession_number}/manifest.json`
+    manifestId: `https://miniatures-iiif.fitzmuseum.cam.ac.uk/${item.accession_number}/manifest.json`
   }));
   if (windows.length < 1) {
     windows.push(catalog[0]);
