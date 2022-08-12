@@ -36,7 +36,6 @@ const PhysicalRuler = class extends Component {
 
     attachRuler() {
         const { viewer, canvasWorld } = this.props;
-        console.log("canvasWorld",canvasWorld)
         const physicalDimensions = canvasWorld?.canvases[0]?.canvas?.__jsonld?.physicalDimensions;
         if (physicalDimensions && physicalDimensions.profile === 'http://iiif.io/api/annex/extensions/physdim') {
             const millimetersPerPhysicalUnit = {
@@ -80,7 +79,7 @@ const PhysicalRuler = class extends Component {
             classes
         } = this.props;
 
-        return <div className={`MuiPaper-elevation4 ${classes.root}`}>
+        return <div className={`MuiPaper-elevation4 ${classes.root} olamalu-physical-ruler`}>
             <IconButton
                 onClick={this.onMenuButtonClicked}>
                 <RulerIcon title={show ? 'show ruler' : 'hide ruler'} />

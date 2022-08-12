@@ -1,6 +1,7 @@
 # Fitzwilliam Miniatures Mirador viewer
 
-http://miniatures-mirador.fitzmuseum.cam.ac.uk/
+- https://miniatures-mirador.fitzmuseum.cam.ac.uk/
+- https://github.com/FitzwilliamMuseum/fitz-unlocking-miniatures-mirador
 
 React app that wraps Miradar and adds the following plugins:
 

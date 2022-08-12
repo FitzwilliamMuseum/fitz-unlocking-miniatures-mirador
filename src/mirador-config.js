@@ -21,7 +21,7 @@ export default {
   window: {
     sideBarOpen: true,
     allowClose: true,
-    defaultSideBarPanel: 'info',
+    defaultSideBarPanel: 'LayersCurtain',
     allowTopMenuButton: false,
     allowFullscreen: true,
     allowMaximize: true,
