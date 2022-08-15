@@ -37,6 +37,11 @@ const steps = [
         element: '#addBtn[aria-label="Add resource"]',
         title: 'Add resource',
         intro: 'Add and compare another resource.'
+    },
+    {
+        element: 'button[aria-label="Toggle sidebar"]',
+        title: 'Collapse sidebar',
+        intro: 'Hide the sidebar to allow for unobstructed viewing.'
     }
 ];
 let onboardingInterval = null;
