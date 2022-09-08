@@ -5,26 +5,19 @@ export default function () {
     const content = {
         quickLinks: [
             { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/', title: 'Home' },
-            { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/collections', title: 'Collections' }
+            { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/collections', title: 'Collections' },
+            { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/about', title: 'About' },
+            { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/blog', title: 'Blog' },
         ],
         contact: [
+            { line: "portraitminiatures [at] fitzmuseum.cam.ac.uk" },
             { line: "The Fitzwilliam Museum" },
             { line: "University of Cambridge" }
         ],
-        footerLogos: [
-            { image_src: '../../content/assets/main-banner-image.png', image_alt: 'Logo' }
-        ],
-        socialMedia: [
-            { type: 'twitter', url: 'https://www.twitter.com/fitzwilliam', 'title': '@FitzProjectHandle' },
-            { type: 'youtube', url: 'https://www.youtube.com/c/FitzMuseum', 'title': 'on YouTube' },
-        ]
     }
 
     return (
         <div className="footer">
-            <div className="footer--social-media">
-                {content.socialMedia.map(item => (<a href={item?.url}>{item.title}</a>))}
-            </div>
             <div className="footer--main">
                 <div className="footer--quick-links">
                     <h4>Quick links</h4>
@@ -38,12 +31,36 @@ export default function () {
                         <li>{item?.line}</li>
                     ))}</ul>
                 </div>
-                <div className="footer--logo">
+                <div className="footer--copyright-codes">
+                    <div>Content: <a
+                        href="https://creativecommons.org/licenses/by-nc/4.0/"
+                        target="__blank"
+                        rel="noopener">CC-BY-NC</a></div>
+                    <div>Metadata: <a
+                        href="https://creativecommons.org/licenses/by-nc/4.0/"
+                        target="__blank"
+                        rel="noopener">CC-BY-NC</a></div>
+                    <div>Images: <a
+                        href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+                        target="__blank"
+                        rel="noopener">CC-BY-NC-ND</a></div>
+                    <div>Code: <a
+                        href="https://www.gnu.org/licenses/gpl-3.0.en.html"
+                        target="__blank"
+                        rel="noopener">GPL-V3</a></div>
                 </div>
             </div>
             <div className="footer--copyright">
-                <a href="#">Copyright University of Cambridge</a>
-                <a href="#">Privacy policy</a>
+                <span>© 2022 The University of Cambridge</span>
+                <span><a
+                    target="__blank"
+                    rel="noopener"
+                    href="https://www.information-compliance.admin.cam.ac.uk/data-protection/general-data">Privacy policy</a></span>
+                <span>Website by <a
+                    href="https://www.olamalu.com/"
+                    target="__blank"
+                    rel="noopener"
+                >www.olamalu.com</a></span>
             </div>
         </div>
     )

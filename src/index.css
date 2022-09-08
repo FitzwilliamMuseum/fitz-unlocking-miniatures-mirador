@@ -78,6 +78,7 @@ ul.main-menu li {
 .footer,
 .footer a {
   color: #ffffff;
+  white-space: nowrap;
 }
 
 .footer--social-media {
@@ -90,16 +91,13 @@ ul.main-menu li {
 
 .footer--main {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 25px;
 }
 
 .footer--quick-links,
 .footer--contact {
-  flex: 3;
-}
-
-.footer--logo {
-  flex: 6;
+  margin: 0 2rem 0 0;
 }
 
 .footer ul {
@@ -108,13 +106,35 @@ ul.main-menu li {
 }
 
 .footer--copyright {
+  display: flex;
   border-top: 1px solid #d2d2d2;
   padding-top: 12.5px;
   font-size: 0.8rem;
 }
 
-.footer--copyright a {
+.footer--copyright>span {
   border-right: 1px solid #d2d2d2;
   padding-right: 25px;
   margin-right: 25px;
+}
+
+.footer--copyright>span:last-child {
+  flex: 1;
+  text-align: end;
+  margin-right: 0;
+  padding-right: 0;
+  border-right: none;
+  margin-left: 0;
+}
+
+.footer .footer--copyright-codes {
+  margin: 3rem 2rem 0 0;
+}
+
+.footer h4 {
+  margin-top: 0;
+}
+
+.footer ul {
+  margin: 0;
 }
