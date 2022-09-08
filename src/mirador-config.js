@@ -42,7 +42,8 @@ export default {
   },
   translations: {
     en: {
-      openCompanionWindow_LayersCurtain: 'Layers Curtain'
+      openCompanionWindow_LayersCurtain: 'Layers Curtain',
+      addManifestUrlHelp: 'The URL of a IIIF resource manifest (JSON file). Copy and paste it here',
     }
   },
   requests: {
