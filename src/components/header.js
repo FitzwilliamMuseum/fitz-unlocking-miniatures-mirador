@@ -3,7 +3,9 @@ import React from "react";
 export default function () {
     const mainMenu = [
         { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/', title: 'Home' },
-        { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/collections', title: 'Collections' }
+        { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/collections', title: 'Collections' },
+        { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/about', title: 'About' },
+        { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/blog', title: 'Blog' },
     ]
     return (
         <React.Fragment>
