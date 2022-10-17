@@ -22,7 +22,12 @@ const steps = [
         element: '.olamalu-layers-curtain-orientation',
         title: 'Orientation',
         intro: 'Click to change the orientation of the curtain from vertical to horizontal.'
-    },    
+    },
+    {
+        element: '.olamalu-layers-curtain-drag-handle:nth-child(1)',
+        title: 'Layer order',
+        intro: 'Use the drag handle to change the order of the layers.'
+    },
     {
         element: '.olamalu-physical-ruler',
         title: 'Ruler',

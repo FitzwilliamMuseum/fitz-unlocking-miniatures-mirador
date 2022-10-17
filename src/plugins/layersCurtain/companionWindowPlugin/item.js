@@ -5,7 +5,6 @@ import DragHandleIcon from '@material-ui/icons/DragHandleSharp';
 import VisibilityIcon from '@material-ui/icons/VisibilitySharp';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOffSharp';
 import MoveToTopIcon from '@material-ui/icons/VerticalAlignTopSharp';
-import IconButton from '@material-ui/core/IconButton';
 import { MiradorMenuButton } from 'mirador/dist/es/src/components/MiradorMenuButton';
 import { Draggable } from "react-beautiful-dnd";
 
@@ -82,7 +81,7 @@ const ListItem = class extends Component {
             provided.draggableProps.style
           )}
         >
-          <div {...provided.dragHandleProps} style={dragHandleWrapperStyle}>
+          <div className='olamalu-layers-curtain-drag-handle' {...provided.dragHandleProps} style={dragHandleWrapperStyle}>
             <DragHandleIcon />
           </div>
           <div style={contentWrapperStyle}>
