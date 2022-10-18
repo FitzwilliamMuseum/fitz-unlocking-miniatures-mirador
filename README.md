@@ -10,6 +10,8 @@ React app that wraps Miradar and adds the following plugins:
 
 Physical ruler plugin based on https://github.com/ubleipzig/mirador-ruler-plugin
 
+Mirador https://github.com/ProjectMirador/mirador
+
 ## Developing
 
 Tested with Node version 16.15.1
@@ -34,8 +36,8 @@ Pass `manifestId[]` query parameters.
 
 http://miniatures-mirador.fitzmuseum.cam.ac.uk/?manifestId[]=https://miniatures-iiif.fitzmuseum.cam.ac.uk/FM%203868/manifest.json&manifestId[]=https://miniatures-iiif.fitzmuseum.cam.ac.uk/FM%203869/manifest.json
 
-## Onboardign
+## Onboarding
 
-Onboardign is implemented as a React componet using https://introjs.com/.
+Onboarding is implemented as a React component using https://introjs.com/.
 
 Modify `steps` in `src/components/onboarding.js`.
