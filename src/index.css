@@ -138,3 +138,7 @@ ul.main-menu li {
 .footer ul {
   margin: 0;
 }
+
+aside[aria-label="Annotations"] li a {
+  display: block;
+}
