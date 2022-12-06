@@ -24,6 +24,7 @@ const PhysicalRuler = class extends Component {
         super(props);
         this.onMenuButtonClicked = this.onMenuButtonClicked.bind(this);
         this.show = false;
+        this.enabled = false;
     }
 
     componentDidMount() {
@@ -31,6 +32,7 @@ const PhysicalRuler = class extends Component {
 
     componentDidUpdate(prevProps) {
         const { viewer } = this.props;
+        this.enabled = false;
         if (viewer) this.attachRuler();
     }
 
@@ -60,6 +62,7 @@ const PhysicalRuler = class extends Component {
             });
 
             this.show = true;
+            this.enabled = true;
         }
     }
 
@@ -74,15 +77,14 @@ const PhysicalRuler = class extends Component {
     }
 
     render() {
-        const {
-            show,
-            classes
-        } = this.props;
+        const { classes } = this.props;
+
+        if (!this.enabled) return <></>;
 
         return <div className={`MuiPaper-elevation4 ${classes.root} olamalu-physical-ruler`}>
             <IconButton
                 onClick={this.onMenuButtonClicked}>
-                <RulerIcon title={show ? 'show ruler' : 'hide ruler'} />
+                <RulerIcon title={this.show ? 'show ruler' : 'hide ruler'} />
             </IconButton>
         </div>
     }
