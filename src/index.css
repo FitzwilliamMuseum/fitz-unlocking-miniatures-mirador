@@ -141,4 +141,22 @@ ul.main-menu li {
 
 aside[aria-label="Annotations"] li a {
   display: block;
+  padding-left: 10px;
+}
+
+li a.open-in-mirador {
+  text-decoration: none;
+  line-height: 1em;
+  padding: 10px 0 7px 0;
+}
+
+
+li a.open-in-mirador:hover,
+li a.open-in-mirador:focus {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+}
+
+li a.open-in-mirador img {
+  width: calc(100% - 10px);
 }

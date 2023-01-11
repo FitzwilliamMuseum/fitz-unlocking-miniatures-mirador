@@ -13,7 +13,8 @@ const AnnotationMicrograph = class extends Component {
     onClickMiradorLink(event) {
         const { addWindow } = this.props;
         event.preventDefault();
-        addWindow({ manifestId: event.target.href });
+        event.stopPropagation();
+        addWindow({ manifestId: event.target.parentElement.href });
     }
 
     componentDidMount() {
@@ -26,9 +27,10 @@ const AnnotationMicrograph = class extends Component {
         const { TargetComponent, targetProps } = this.props;
 
         document.querySelectorAll(this.miradorLinkCSSSelector).forEach((element) => {
-            if (element.innerHTML === 'Open in Mirador') {
+            if (element.getAttribute('alt') === 'Open in Mirador') {
                 window.removeEventListener('scroll', this.onClickMiradorLink);
                 element.addEventListener('click', this.onClickMiradorLink);
+                element.classList.add('open-in-mirador');
             }
         });
 
