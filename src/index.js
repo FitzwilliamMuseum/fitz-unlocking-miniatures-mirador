@@ -19,9 +19,13 @@ async function initMirador(manifestId) {
   }
   const response = await fetch("https://unlocking-miniatures.fitz.ms/items/miniatures/?fields%5B%5D=accession_number");
   const data = (await response.json()).data;
-  const catalog = data.map(item => ({
-    manifestId: `https://miniatures-iiif.fitzmuseum.cam.ac.uk/${item.accession_number}/manifest.json`
-  }));
+  const urlSafeRegex = /[^a-zA-Z0-9_. ]/g;
+  const catalog = data.map(item => {
+    const urlSafeAccessionNumber = item.accession_number.replace(urlSafeRegex, '-');
+    return {
+      manifestId: `https://miniatures-iiif.fitzmuseum.cam.ac.uk/${urlSafeAccessionNumber}/manifest.json`
+    }
+  });
   if (windows.length < 1) {
     windows.push(catalog[0]);
   }
