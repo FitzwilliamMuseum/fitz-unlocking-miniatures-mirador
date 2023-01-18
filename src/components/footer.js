@@ -6,6 +6,7 @@ export default function () {
         quickLinks: [
             { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/', title: 'Home' },
             { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/collections', title: 'Collections' },
+            { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/research', title: 'Methodology' },
             { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/terminology', title: 'Terminology' },
             { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/about', title: 'About' },
             { link: 'https://unlocking-miniatures.fitzmuseum.cam.ac.uk/blog', title: 'Blog' },
